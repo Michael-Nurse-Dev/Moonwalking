@@ -5,8 +5,15 @@
    --white-color: #dff3e4;   
 }
 
-body{
-   color: var(--dark-color);
+main{
+   color: var(--primary-color);
+   background-color: var(--dark-color);
+}
+
+.hero{
+   font-size: 4rem;
+   letter-spacing: 15px;
+   color: #f5d178;
 }
 
 nav{
@@ -18,18 +25,19 @@ footer{
    width: 100%;
    left: 0;
    bottom: 0;
-   color: var(--white-color);
+   color: lightgray;
    background-color: var(--primary-color);
    /* border-style: dashed; */
 }
 
 h1,h2,h3,h4,h5,h6{
-   color:var(--primary-color);
+   color:darkgray;
 }
 
 main>.container {
    padding: 60px 15px 0;
    margin-bottom: 5rem;
+   color:darkgray;
 }
 .sticky-nav {
    position: fixed;
@@ -62,20 +70,37 @@ footer .social:hover{
 }
 
 .bsicon{
-   color:purple;
+   color:darkgray;
 }
 
 .jsicon{
-   color:rgb(226,211,4)
+   color:darkgray;
 }
 
 .cssicon{
-   color: rgb(122,82,214)
+   color: darkgray;
 }
 
 .html5icon{
+   color: darkgray;;
+}
+
+.bsicon:hover{
+   color:purple;
+}
+
+.jsicon:hover{
+   color:rgb(226,211,4)
+}
+
+.cssicon:hover{
+   color: rgb(122,82,214)
+}
+
+.html5icon:hover{
    color: orangered;
 }
+
 .checklist > li i{
    color: green;
 }
@@ -88,3 +113,16 @@ word-break: break-all;
 word-wrap: break-word;
 }
 
+#btnSubmit, #callToActionButtonHero{
+   background-color: #70ae15;
+   color: #f5d178;
+}
+  
+#btnSubmit:hover{
+   background-color: #70ae15;
+}
+
+#callToActionButtonHero:hover{
+   background-color: #f5d178;
+   color: black;
+}
