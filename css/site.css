@@ -10,9 +10,13 @@ main{
    background-color: var(--dark-color);
 }
 
+html{
+   background-color: var(--dark-color);
+}
+
 .hero{
-   font-size: 4rem;
-   letter-spacing: 15px;
+   font-size: 6vmin;
+   letter-spacing: 12px;
    color: #f5d178;
 }
 
@@ -126,3 +130,21 @@ word-wrap: break-word;
    background-color: #f5d178;
    color: black;
 }
+
+#catbox{
+   width: 50vmin;
+   margin: auto;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+   #catbox{
+      margin: 3rem;
+      width:400px;
+   } 
+   .hero{
+      font-size: 3rem;
+   }
+}
+
