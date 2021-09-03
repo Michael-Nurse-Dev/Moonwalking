@@ -1,7 +1,14 @@
 //Controller Function
 function getWordsEntered(){
-   const originalWords = document.getElementById("wordsEnteredId").value;   
-   const reversed = reverseWords(originalWords);
+   const originalWords = document.getElementById("wordsEnteredId").value; 
+
+   if (originalWords.length > 0) {
+      const reversed = reverseWords(originalWords);      
+   }
+   else{
+      alert("If you try to reverse nothing you will damage the flux capacitors.");
+   }
+   
    displayMoontalk(reversed);
 }
 
