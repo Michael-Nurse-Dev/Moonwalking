@@ -1,15 +1,14 @@
+//Controller Function
 function getWordsEntered(){
-   const originalWords = document.getElementById("wordsEnteredId").value;
-   
+   const originalWords = document.getElementById("wordsEnteredId").value;   
    const reversed = reverseWords(originalWords);
    displayMoontalk(reversed);
 }
 
-
+//Logic Function
 function reverseWords(words){
 
    wordiness = words.length;
-
    reversed = [];
 
    for (let i = 0; i < wordiness; i++) {
@@ -20,34 +19,10 @@ function reverseWords(words){
    return reversed;
 }
 
-// //UI function
+//UI function
 function displayMoontalk(moontalking){
 
    const html = moontalking.join("");
-
+   document.getElementById("okNowSayThis").innerHTML = "Ok...now say this out loud and you will be Moontalking!";
    document.getElementById("results").innerHTML = html;
 }
-
-
-
-// function displayNumbers(numbers){
-
-//    let templateRows = "";
-
-//    for (let i = 0; i < numbers.length; i++) {
-//       let n = numbers[i];
-//       let className = "";
-
-//       if (n % 2 == 0) {
-//          className = "even";
-//       }
-//       else{
-//          className = "odd";         
-//       }
-
-//       templateRows += `<tr><td class="${className}">${n}</td></tr>`;      
-//    }
-
-//    // Insert the final result into the DOM.
-//    document.getElementById("results").innerHTML = templateRows;
-// }

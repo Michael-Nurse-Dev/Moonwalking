@@ -67,23 +67,55 @@
    <!-- ==== Main section ==== -->
    <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
-         <h2 class="border-1 border-bottom border-dark">The Code</h2>
+         <h2 class="mb-4 border-1 border-bottom border-dark hero font-effect-neon">THE CODE</h2>
          <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                <pre class="line-numbers">
-                  <code class="language-javascript">
-                     //Define Hello World
-                     function HelloWorld(){
-                        alert("Hello World");
-                        }
+                  <code class="language-javascript">                     
+                     //Controller Function
+function getWordsEntered(){
+   const originalWords = document.getElementById("wordsEnteredId").value;   
+   const reversed = reverseWords(originalWords);
+   displayMoontalk(reversed);
+}
+
+//Logic Function
+function reverseWords(words){
+
+   wordiness = words.length;
+   reversed = [];
+
+   for (let i = 0; i < wordiness; i++) {
+      const element = words[wordiness - i -1];
+      reversed.push(element);
+   }
+
+   return reversed;
+}
+
+//UI function
+function displayMoontalk(moontalking){
+
+   const html = moontalking.join("");
+   document.getElementById("okNowSayThis").innerHTML = 
+      "Ok...now say this out loud and you will be Moontalking!";
+   document.getElementById("results").innerHTML = html;
+}
+
+//Event listener on page 
+   document.getElementById("btnSubmit").addEventListener("click", getWordsEntered);
+
                   </code>
                </pre>
             </div>
             <div class="col-lg-4">
-                  <p>The Code is strcutured in one function.</p>
-                  <h5>Hello World</h5>
-                  <p>Hello World is a function that displays an alert with the message "Hello World"</p>
-            </div>
+                  <h3 class="mb-3 border-bottom border-2">Code discussion</h3>
+                  <p>The code separates concerns into a controller, logic and UI layer.</p>
+                  <p>No parsing of input is neccessary as the event listener returns a string, if digits are entered they are reversed as well.</p>
+                  <p>The logic function simply loops through the array backwards (strings can be enumerated as arrays of characters) and returns a new array with the characters reversed. </p>
+                  <p>The display function converts the array parameter to a string using the join method which unlike the toString method removes the comma separators. It inserts a string into the DOM by referencing the id of the div where it must be placed.</p>
+                  <p>All the above is triggered by an event listener on the page which triggers if the button is clicked.</p>
+               </div>
          </div>
       </div>
    </main>
